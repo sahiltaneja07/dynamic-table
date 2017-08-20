@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<div class="outer">
+  <div class="inner">
+	<table>
+	  <tr class="headerRow">
+	  	<td>company</td>
+	  	<td>
+	  		<tr>
+	    		<td class="allColumns" *ngFor="let column of columns">{{column}}</td> 
+	    	</tr>
+	    </td>
+	  </tr>
+	  <tr class="companyRow" *ngFor="let company of companies">
+	    <td class="companyFirstCell">
+	    	<div class="companyName">{{company.name}}</div>
+	    	<div class="companyDescription">{{company.description}}</div>
+	    </td>
+	    <td class="FS14">{{company[columns[0]]}}</td>
+	    <td class="FS14">{{company[columns[1]]}}</td>
+	    <td class="FS14">{{company[columns[2]]}}</td>
+	    <td class="FS14">{{company[columns[3]]}}</td>
+	    <td class="FS14">{{company[columns[4]]}}</td>
+	    <td class="FS14">{{company[columns[5]]}}</td>
+	  </tr>
+	</table>
+  </div>
+</div>

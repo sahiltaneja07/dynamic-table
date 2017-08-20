@@ -1,0 +1,63 @@
+table {
+	border-collapse: collapse;
+    width: 100%;
+}
+
+table td:first-child {
+	padding-left: 15px;
+}
+
+table td:last-child {
+	padding-right: 15px;
+}
+
+table tr:first-child td:first-child {
+    border-top-left-radius: 4px;
+}
+
+table tr:first-child td:last-child {
+    border-top-right-radius: 4px;
+}
+
+table tr:first-child td:first-letter {
+    text-transform: capitalize;
+}
+
+.FS14 {
+	font-size: 14px;
+}
+
+.headerRow {
+    height: 42px;
+    background-color: #7B8994;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.headerRow .allColumns {
+	width: 125px;
+    text-align: center;
+}
+
+.companyRow {
+    border-bottom: 1px solid #E3E8EB;	
+}
+
+.companyFirstCell {
+	height: 70px;
+    background-color: #F6F7F9;
+    border-right: 2px solid #C9CACA;
+    border-left: 2px solid #C9CACA;
+}
+
+.companyName{
+	font-weight: 700;
+}
+
+.companyDescription {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 175px;
+    overflow: hidden;
+}
