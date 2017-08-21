@@ -30,17 +30,4 @@ export class AppService {
 		);
 	}
 
-	getColumns(): string[] {
-		return [
-			'Company',
-			'Location',
-			'Market',
-			'Website',
-			'Employees',
-			'Stage',
-			'Description',
-			'Founders'
-		];
-	}
-
 }

@@ -1,26 +1,43 @@
-<div class="outer">
-  <div class="inner">
+<!-- <div class="outer">
 	<table>
 	  <tr class="headerRow">
-	  	<td>company</td>
-	  	<td>
-	  		<tr>
-	    		<td class="allColumns" *ngFor="let column of columns">{{column}}</td> 
-	    	</tr>
-	    </td>
+	  	<td class="fixedColumn">company</td>
+  		<td class="allColumns" *ngFor="let column of columns">{{column}}</td>
 	  </tr>
 	  <tr class="companyRow" *ngFor="let company of companies">
-	    <td class="companyFirstCell">
+	    <td class="companyFirstCell fixedColumn">
 	    	<div class="companyName">{{company.name}}</div>
 	    	<div class="companyDescription">{{company.description}}</div>
 	    </td>
-	    <td class="FS14">{{company[columns[0]]}}</td>
-	    <td class="FS14">{{company[columns[1]]}}</td>
-	    <td class="FS14">{{company[columns[2]]}}</td>
-	    <td class="FS14">{{company[columns[3]]}}</td>
-	    <td class="FS14">{{company[columns[4]]}}</td>
-	    <td class="FS14">{{company[columns[5]]}}</td>
+	    <td class="FS14 allColumns">{{company[columns[0]]}}</td>
+	    <td class="FS14 allColumns">{{company[columns[1]]}}</td>
+	    <td class="FS14 allColumns">{{company[columns[2]]}}</td>
+	    <td class="FS14 allColumns">{{company[columns[3]]}}</td>
+	    <td class="FS14 allColumns">{{company[columns[4]]}}</td>
+	    <td class="FS14 allColumns">{{company[columns[5]]}}</td>
 	  </tr>
 	</table>
-  </div>
+</div> -->
+
+
+
+<div class="table-wrapper">
+    <table>
+        <tr class="headerRow">
+            <td class="fixedColumn">Company</td>
+            <td class="allColumns" *ngFor="let column of columns">{{column}}</td>
+        </tr>
+        <tr *ngFor="let company of companies">
+            <td class="companyFirstCell fixedColumn">
+      	    	<div class="companyName">{{company.name}}</div>
+      	    	<div class="companyDescription">{{company.description}}</div>
+      	    </td>
+      	    <td class="FS14 allColumns">{{company[columns[0]]}}</td>
+      	    <td class="FS14 allColumns">{{company[columns[1]]}}</td>
+      	    <td class="FS14 allColumns">{{company[columns[2]]}}</td>
+      	    <td class="FS14 allColumns">{{company[columns[3]]}}</td>
+      	    <td class="FS14 allColumns">{{company[columns[4]]}}</td>
+      	    <td class="FS14 allColumns">{{company[columns[5]]}}</td>
+        </tr>
+    </table>
 </div>
