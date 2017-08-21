@@ -1,13 +1,5 @@
-/*table {
-		border-collapse: collapse;
-}
-
-table td:first-child {
-		padding-left: 15px;
-}
-
-table td:last-child {
-		padding-right: 15px;
+table {
+	border-collapse: collapse;
 }
 
 table tr:first-child td:first-child {
@@ -18,45 +10,54 @@ table tr:first-child td:last-child {
     border-top-right-radius: 4px;
 }
 
-table tr:first-child td:first-letter {
-    text-transform: capitalize;
+.secondary-table-wrapper {
+	height: 485px;
+    width: 100%;
+    overflow: hidden;
 }
 
-.outer {
-	width: 800px;
-	overflow-x:scroll;
-  overflow-y:visible;
-}
-
-.FS14 {
-		font-size: 14px;
-}
-
-.headerRow {
-    height: 42px;
-    background-color: #7B8994;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.allColumns {
-		width: 125px;
-    text-align: center;
+.table-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 75%;
+    height: 500px;
+    margin-left: 25%;
 }
 
 .companyRow {
     border-bottom: 1px solid #E3E8EB;
 }
 
+.allColumns {
+	padding: 0px 50px;
+	height: 38px;
+    text-align: center;
+}
+
+.fixedColumn {
+    position: fixed;
+    left: 5px;
+	width: 25%;
+}
+
+.headerRow, .headerRow .fixedColumn {
+    background-color: #7B8994;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 16px;
+}
+
 .companyFirstCell {
-		height: 70px;
+	height: 42px;
+    padding: 16px;
+	border-bottom: 1px solid #E3E8EB;
     background-color: #F6F7F9;
     border-right: 2px solid #C9CACA;
     border-left: 2px solid #C9CACA;
 }
 
 .companyName{
-		font-weight: 700;
+	font-weight: 700;
 }
 
 .companyDescription {
@@ -67,44 +68,69 @@ table tr:first-child td:first-letter {
     overflow: hidden;
 }
 
-.fixedColumn {
-	position: fixed;
-	left: 5px;
-}*/
-
-
-
-
-table {
-		border-collapse: collapse;
+.headerRow td:first-letter {
+    text-transform: capitalize;
 }
 
-.table-wrapper {
-    overflow-x: scroll;
-    overflow-y: visible;
-    width: 75%;
-    margin-left: 25%;
+.table-options {
+	padding: 15px 2%;
 }
 
-/*td, th {
-    padding: 5px 20px;
-    width: 100px;
-}*/
-
-.allColumns {
-		padding: 0 50px;
-    text-align: center;
+.scroll-button-parent {
+	float: right;
 }
 
-.fixedColumn {
-    position: fixed;
-    left: 5px;
-		width: 25%;
+.float-none {
+	clear: both;
 }
-
-.headerRow, .headerRow .fixedColumn {
-    height: 42px;
-    background-color: #7B8994;
-    color: #ffffff;
+ .scroll-btns {
+ 	cursor: pointer;
+ 	margin-right: 5px;
+ 	background-color: #BDC4CA;
+    color: #fff;
     font-weight: 700;
+    border-radius: 20px;
+    padding: 10px;
+ }
+
+.hyphen {
+	font-size: 23px;
+}
+
+.customize-columns {
+	float: right;
+	color: #24B6FF;
+	margin-right: 30px;
+	margin-top: 4px;
+	cursor: pointer;
+	position: relative;
+}
+
+.dropdown {
+	position: absolute;
+	left: -10px;
+	top: 25px;
+	font-weight: 700;
+	color: #fff;
+	display: none;
+	width: 150px;
+	background-color: #BDC4CA;
+}
+
+.dropdown ul {
+	list-style: none;
+    padding-left: 10px;
+}
+
+.dropdown ul li {
+	margin-bottom: 3px;
+}
+
+.dropdown ul li label {
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.tableBody {
+	height: 74px!important;
 }

@@ -1,43 +1,44 @@
-<!-- <div class="outer">
-	<table>
-	  <tr class="headerRow">
-	  	<td class="fixedColumn">company</td>
-  		<td class="allColumns" *ngFor="let column of columns">{{column}}</td>
-	  </tr>
-	  <tr class="companyRow" *ngFor="let company of companies">
-	    <td class="companyFirstCell fixedColumn">
-	    	<div class="companyName">{{company.name}}</div>
-	    	<div class="companyDescription">{{company.description}}</div>
-	    </td>
-	    <td class="FS14 allColumns">{{company[columns[0]]}}</td>
-	    <td class="FS14 allColumns">{{company[columns[1]]}}</td>
-	    <td class="FS14 allColumns">{{company[columns[2]]}}</td>
-	    <td class="FS14 allColumns">{{company[columns[3]]}}</td>
-	    <td class="FS14 allColumns">{{company[columns[4]]}}</td>
-	    <td class="FS14 allColumns">{{company[columns[5]]}}</td>
-	  </tr>
-	</table>
-</div> -->
+<div class="table-options">
+	<div class="scroll-button-parent">
+		<span class="scroll-btns" (click)="scrollLeft()"><<span class="hyphen">-</span></span>
+		<span class="scroll-btns" (click)="scrollRight()"><span class="hyphen">-</span>></span>
+	</div>
+	<div class="customize-columns">
+		<div (click)="onCustomizeColumnClick()">Customize columns</div>
+		<div class="dropdown">
+			<ul>
+				<li *ngFor="let column of filterColumns; let i=index">
+					<input type="checkbox" [(ngModel)]="column.value" (change)="onColumnChange(column)" id="{{i}}" />
+					<label for="{{i}}">{{column.name}}</label>
+				</li>
+			</ul>
+		</div>
+	</div>
 
+	<div class="float-none"></div>
+</div>
 
-
-<div class="table-wrapper">
-    <table>
-        <tr class="headerRow">
-            <td class="fixedColumn">Company</td>
-            <td class="allColumns" *ngFor="let column of columns">{{column}}</td>
-        </tr>
-        <tr *ngFor="let company of companies">
-            <td class="companyFirstCell fixedColumn">
-      	    	<div class="companyName">{{company.name}}</div>
-      	    	<div class="companyDescription">{{company.description}}</div>
-      	    </td>
-      	    <td class="FS14 allColumns">{{company[columns[0]]}}</td>
-      	    <td class="FS14 allColumns">{{company[columns[1]]}}</td>
-      	    <td class="FS14 allColumns">{{company[columns[2]]}}</td>
-      	    <td class="FS14 allColumns">{{company[columns[3]]}}</td>
-      	    <td class="FS14 allColumns">{{company[columns[4]]}}</td>
-      	    <td class="FS14 allColumns">{{company[columns[5]]}}</td>
-        </tr>
-    </table>
+<div class="secondary-table-wrapper">
+	<div class="table-wrapper">
+	    <table>
+	        <tr class="headerRow">
+	            <td class="fixedColumn">company</td>
+	            <td class="allColumns" *ngFor="let column of columns">{{column.name}}</td>
+	        </tr>
+	        <tr class="companyRow" *ngFor="let company of companies">
+	            <td class="fixedColumn">
+	            	<div class="companyFirstCell">
+		      	    	<div class="companyName">{{company.name}}</div>
+		      	    	<div class="companyDescription">{{company.description}}</div>
+	      	    	</div>
+	      	    </td>
+	      	    <td class="allColumns tableBody" *ngIf="columns[0]">{{company[columns[0].name]}}</td>
+	      	    <td class="allColumns tableBody" *ngIf="columns[1]">{{company[columns[1].name]}}</td>
+	      	    <td class="allColumns tableBody" *ngIf="columns[2]">{{company[columns[2].name]}}</td>
+	      	    <td class="allColumns tableBody" *ngIf="columns[3]">{{company[columns[3].name]}}</td>
+	      	    <td class="allColumns tableBody" *ngIf="columns[4]">{{company[columns[4].name]}}</td>
+	      	    <td class="allColumns tableBody" *ngIf="columns[5]">{{company[columns[5].name]}}</td>
+	        </tr>
+	    </table>
+	</div>
 </div>
